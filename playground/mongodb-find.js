@@ -16,15 +16,15 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', (err, db) => {
   //   console.log('Unable to fetch', err);
   // });
 
-  db.collection('Users')
-  .find({name: 'Elgun'})
-  .toArray()
-  .then((docs) => {
-    console.log(`Todos:`);
-    console.log(JSON.stringify(docs, undefined, 2));
-  }, (err) => {
-    console.log('Unable to fetch', err);
-  });
+  // db.collection('Users')
+  // .find({name: 'Elgun'})
+  // .toArray()
+  // .then((docs) => {
+  //   console.log(`Todos:`);
+  //   console.log(JSON.stringify(docs, undefined, 2));
+  // }, (err) => {
+  //   console.log('Unable to fetch', err);
+  // });
 
   // db.close();
 });
