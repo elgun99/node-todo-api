@@ -15,15 +15,18 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.3",
+    "crypto-js": "^3.1.9-1",
     "express": "^4.16.3",
+    "jsonwebtoken": "^8.3.0",
     "lodash": "^4.17.10",
-    "mongodb": "^2.2.5",
-    "mongoose": "^5.2.9"
+    "mongodb": "^2.2.36",
+    "mongoose": "^5.2.12",
+    "validator": "^10.7.0"
   },
   "devDependencies": {
     "expect": "^23.5.0",
     "mocha": "^5.2.0",
-    "nodemon": "^1.18.3",
+    "nodemon": "^1.18.4",
     "supertest": "^3.1.0"
   }
 }
