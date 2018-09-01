@@ -97,7 +97,6 @@ app.patch('/todos/:id', (req, res) => {
   })
 });
 
-// POST /users
 app.post('/users', (req, res) => {
   var body = _.pick(req.body, ['email', 'password']);
   var user = new User(body);
@@ -120,7 +119,9 @@ app.post('/users/login', (req, res) => {
   User.findOne({email}).then((user) => {
     bcrypt.compare(password, user.password, (err, result) => {
       if (result === true) {
-        res.status(200).send({user});
+        user.generateAuthToken().then((token) => {
+          return res.header('x-auth', token).send(user);
+        });
       } else {
         res.status(400).send();
       }
